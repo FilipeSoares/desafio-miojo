@@ -7,21 +7,10 @@ if (args.length!=3){
 }
 
 let time = parseInt(args[0]);
-
 let hourglasses = args.slice(1).map(item => parseInt(item)).sort();
 let minorHourGlass = parseInt(hourglasses[0]);
 let majorHourGlass = parseInt(hourglasses[1]);
 
-if ( !(time >= 0 && time <= Number.MAX_SAFE_INTEGER) ) {
-    throw new Error("O tempo de preparo deve ser um valor entre 0 e 9007199254740991");
-}
+let result = calculator.minimumTime(time, minorHourGlass, majorHourGlass);
 
-if ( !(minorHourGlass >= 0 && minorHourGlass <= Number.MAX_SAFE_INTEGER) || !(majorHourGlass >= 0 && majorHourGlass <= Number.MAX_SAFE_INTEGER)) {
-    throw new Error("O tempo das ampulhetas deve ser um valor entre 0 e 9007199254740991");
-}
-
-if ( (time > minorHourGlass) || (time > majorHourGlass) ) {
-    throw new Error("O tempo das ampulhetas deve ser maior que o tempo de preparo!");
-}
-
-calculator.minimumTime(time, minorHourGlass, majorHourGlass);
+console.log(result);

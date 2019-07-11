@@ -1,5 +1,9 @@
+const validator = require('../validator');
+
 module.exports.minimumTime = (time, minorHourGlass, majorHourGlass) => {
 
+    validator.validate(time, minorHourGlass, majorHourGlass);
+    
     let index = 0;
     let originalMinor = minorHourGlass;
     let originalMajor = majorHourGlass;

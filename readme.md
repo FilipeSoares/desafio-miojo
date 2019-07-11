@@ -10,5 +10,5 @@ Faça um programa que, dado o tempo de preparo do miojo, e os tempos das duas am
 # Run
 
 ```console
-$node miojo/src/app/index T A1 A2
+$ node ./src/app/index T A1 A2
 ```
