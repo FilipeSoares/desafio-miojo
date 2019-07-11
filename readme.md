@@ -7,8 +7,32 @@ Dessa forma, o miojo ficará 3 minutos no fogo (do minuto 7 ao minuto 10).Assim,
  
 Faça um programa que, dado o tempo de preparo do miojo, e os tempos das duas ampulhetas (ambos maiores que o tempo do miojo), determina o tempo mínimo necessário para o miojo ficar pronto ou se não é possível cozinhar o miojo no tempo exato com as ampulhetas disponíveis.
 
-# Run
+## Restrições
 
-```console
-$ node ./src/app/index T A1 A2
+Devem ser passados três parâmetros obrigatoriamente: tempo de preparo (T), tempo da primeira ampulheta (A1) e tempo da segunda ampulheta (A2)
+
+O parâmetro de tempo de preparo (T) deve ser maior que 0 e menor que 9007199254740992 (Number.MAX_SAFE_INTEGER)
+
+Os parâmetros de tempos das ampulhetas (A1, A2) devem ser maiores que 0 e menores que 9007199254740992 (Number.MAX_SAFE_INTEGER)
+
+## Clone 
+
+```bash
+$ git clone https://github.com/FilipeSoares/desafio-miojo.git ./miojo
 ```
+
+## Run
+
+```bash
+$ node ./miojo T A1 A2
+```
+
+## Tests
+
+```bash
+$ node ./miojo/src/app/test.js
+```
+
+# Node
+
+> v10.15.3
